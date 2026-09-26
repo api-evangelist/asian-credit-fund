@@ -1,23 +1,68 @@
 aid: asian-credit-fund
+
 name: Asian Credit Fund
-description: 'Asian Credit Fund is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://asiancreditfund.com/wp-content/uploads/2022/01/ACF-logo-25-anniversary.webp
+
+description: 'Asian Credit Fund (ACF) is a Kazakh microfinance organization founded in 1997, providing microloans and non‑financial services to individuals and small businesses. Regulated by the National Bank of Kazakhstan, ACF aims to promote financial inclusion and sustainable development, offering ESG‑focused products and transparent reporting through annual and audit reports.'
+
 url: https://raw.githubusercontent.com/api-evangelist/asian-credit-fund/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Microfinance
+- Kazakhstan
+- ESG
+- Financial Inclusion
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/asian-credit-fund-hosts.yml
+- type: DomainSecurity
+  url: security/asian-credit-fund-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://asiancreditfund.com
+- type: Documentation
+  url: https://asiancreditfund.com/en/about-acf
+- type: About
+  url: https://asiancreditfund.com/en/about-acf
+- type: ESG
+  url: https://asiancreditfund.com/en/sd-esg-en
+- type: Careers
+  url: https://asiancreditfund.com/en/career
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider's website is static HTML with no machine‑readable API specification discovered.
+  evidence:
+    - url: https://asiancreditfund.com
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
